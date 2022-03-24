@@ -30,36 +30,6 @@ app.get('/all', function (req, res){
     res.send(projectData);
 });
 
-const handleWeatherSearch = async(url) => {
-    const res = await fetch(url);
-    try{
-        const wdata = await res.json();
-        let weather = {}
-        weather.city = wdata.data[0].city_name;
-        weather.timezone = wdata.data[0].timezone;
-        weather.temp = wdata.data[0].temp; //in celsius
-        weather.description = wdata.data[0].weather.description;
-        weather.sunrise = wdata.data[0].sunrise;
-        weather.sunset = wdata.data[0].sunset;
-        return weather;
-    }catch(err){
-        console.log("error occurred: ", err)
-    }
-}
-
-const handlePixSearch = async(url) => {
-    const res = await fetch(url);
-    try{
-        const pixData = await res.json();
-        let pix = {}
-        pix.imageAddress = pixData.webformatURL;
-        pix.imageUrl = pixData.userImageURL;
-        return pix;
-    }catch(err){
-        console.log("error occurred: ", err)
-    }
-}
-
 app.post('/process-infos', function (req, res){
     const geonameEndpoint = 'http://api.geonames.org/';
     const geoQuery = `searchJSON?q=${req.body.place}&maxRows=10&username=${GEO_USER}`
