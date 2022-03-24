@@ -1,0 +1,71 @@
+@import "design.scss";
+
+body {
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas: 
+    "header header header"
+    ". form ."
+    ". result ."
+    ". generate .";
+    column-gap: 20px;
+    background-image: url("./image/field.jpg");
+    font-family: 'Merriweather', serif;
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.form {
+    display: grid;
+    grid-area: form;
+}
+
+.result {
+    display: grid;
+    grid-area: result;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.generate {
+    display: grid;
+    grid-area: generate;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (min-width: 900px){
+    body {
+        display: grid;
+        grid-template-columns: 10em 1fr 10em;
+        grid-template-areas: 
+        "header header header"
+        ". form ."
+        ". result ."
+        ". generate .";
+        row-gap: 20px;
+        background-image: url("./image/field.jpg");
+        font-family: 'Merriweather', serif;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
