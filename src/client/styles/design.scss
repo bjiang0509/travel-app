@@ -1,0 +1,155 @@
+h1 {
+    color: #b1a5a5;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+label {
+    font-size: 12px;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+input {
+    margin-left: 10px;
+    &#dest{
+        width: 55%;
+        height: 20px;
+    }
+
+    &#start, &#end{
+        width: 60%;
+        height: 25px;
+    }
+}
+
+#generate {
+    margin-top: 20px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.form{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    .container{
+        justify-content: center;
+        align-items: flex-start;
+        div{
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+}
+
+.result{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        div{ 
+            margin-bottom: 20px;
+        }
+        #description{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    img{
+        text-align: center;
+        width: 280px;
+        height: 280px;
+        border: 5px;
+        border-style: solid;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    h1 {
+        color: #b1a5a5;
+        -webkit-text-stroke: 1px black;
+        font-family: 'Merriweather', serif;
+        font-size: 36px;
+        font-weight: 900;
+    }
+    
+    label {
+        padding-top: 5px;
+        font-size: 12px;
+        text-decoration: underline;
+    }
+    
+    input {
+        cursor: pointer;
+        margin-left: 5px;
+        margin-right: 0;
+        margin-bottom: 0;
+        border-radius: 5px;
+        &#dest{
+            width: 55%;
+            height: 20px;
+        }
+    
+        &#start, &#end{
+            width: 60%;
+            height: 25px;
+        }
+    }
+    
+    #generate {
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .form{
+        .container{
+            div{
+                width: 100%;
+            }
+        }
+    }
+
+    .show-up{
+        visibility: hidden;
+    }
+    
+    .result{
+        background-color: white;
+        border: 5px;
+        border-style: solid;
+        border-color: grey;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: lightgrey;
+        //background-image: url('./image/grass.jpg');
+    
+        .container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            div{ 
+                margin-bottom: 20px;
+            }
+        }
+    
+        img{
+            width: 300px;
+            height: 250px;
+            border: 5px;
+            border-style: solid;
+        }
+    }
+}
