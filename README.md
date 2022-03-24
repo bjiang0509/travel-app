@@ -36,5 +36,6 @@ Jest is installed to conduct functional testing. The relevant tests locate in th
 ## Running the Project
 
 1. Replace .env file with personal API keys
-2. `npm run prod` on the terminal
-3. `npm run start` on the terminal
+2. `npm install` on the terminal
+3. `npm run prod` on the terminal
+4. `npm run start` on the terminal
