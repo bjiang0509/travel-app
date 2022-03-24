@@ -30,6 +30,9 @@ The server is set up using `express` from node.js and `npm` (package manager for
 ### dotenv
 dotenv needs to be installed to use enviroment variables. The `.env` file is located in the root directory and it contains the api key provided by the APIs.
 
+### Jest
+Jest is installed to conduct functional testing. The relevant tests locate in the `__test__` folder. `npm run test` on the terminal will run the tests and return the result on the console.
+
 ## Running the Project
 
 1. Replace .env file with personal API keys
